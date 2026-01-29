@@ -33,15 +33,19 @@ Isso facilitou:
 
 ## Estrutura do projeto
 
+```md
+```text
 assets/
-├── mulheres/
-│   └── Imagens utilizadas nos cards
-├── ui/
-│   └── Elementos visuais (ícones, vídeos, animações)
+  mulheres/
+    imagens dos cards
+  ui/
+    elementos visuais (ícones, vídeos, animações)
+
 script.js
 global.css
 home.css
 Pagina_Inicial.html
+
 
 
 
