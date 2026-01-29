@@ -1,6 +1,6 @@
 # Mulheres Extraordinárias
 
-Este projeto nasceu da vontade de estudar front-end na prática e, ao mesmo tempo, criar algo com significado real.
+Este é um projeto pessoal desenvolvido como parte do meu processo de aprendizado em front-end, com foco em base sólida, organização e atenção aos detalhes. O projeto nasceu da vontade de estudar front-end na prática e, ao mesmo tempo, criar algo com significado real.
 
 A ideia foi desenvolver uma página que apresenta mulheres negras e indígenas que marcaram a história, mas que muitas vezes não aparecem nos livros ou nos espaços mais óbvios. Cada card traz uma breve biografia, o período histórico e uma imagem, tudo organizado de forma visual e simples.
 
@@ -18,7 +18,7 @@ Também foi um exercício de curadoria: escolher quem entra, como apresentar cad
 - CSS3  
 - JavaScript (sem frameworks)
 
-A escolha foi intencional: quis entender bem a base antes de partir para bibliotecas ou frameworks.
+A escolha foi intencional: quis entender bem a base antes de partir para bibliotecas ou frameworks, evitando abstrações prematuras.
 
 ## Como o projeto funciona
 
@@ -34,12 +34,15 @@ Isso facilitou:
 ## Estrutura do projeto
 
 assets/
-├── mulheres/ # Imagens utilizadas nos cards
-└── ui/ # Elementos visuais (ícones, vídeos, animações)
-script.js # Lógica do carrossel e renderização
-global.css # Estilos globais
-home.css # Estilos da página inicial
+├── mulheres/
+│   └── Imagens utilizadas nos cards
+├── ui/
+│   └── Elementos visuais (ícones, vídeos, animações)
+script.js
+global.css
+home.css
 Pagina_Inicial.html
+
 
 
 ## Status atual
