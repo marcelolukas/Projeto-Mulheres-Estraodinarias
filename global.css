@@ -1,0 +1,200 @@
+/* Importa a fonte Inter do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* =========================
+   RESET GLOBAL
+   ========================= */
+
+/* Remove margens e espaçamentos padrão de TODOS os elementos */
+* {
+  margin: 0; /* remove margem padrão do navegador */
+  padding: 0; /* remove padding padrão do navegador */
+}
+
+/* =========================
+   ESTILO GERAL DA PÁGINA
+   ========================= */
+
+/* Define a cor de fundo geral da página */
+body {
+  background-color:#FFF1C1;
+; /* fundo bege claro */
+}
+
+/* =========================
+   CABEÇALHO DO SITE
+   ========================= */
+
+/* Container principal do header */
+.cabecalho {
+  display: flex; /* coloca os itens lado a lado */
+  align-items: center; /* alinha verticalmente no centro */
+  padding: 16px 32px; /* espaço interno (cima/baixo | lados) */
+  background-color: #ffd84d; /* fundo marrom escuro */
+  border-bottom: 2px solid #1e8449; /* linha dourada na base */
+}
+
+/* =========================
+   LOGO / IDENTIDADE
+   ========================= */
+
+/* Container da logo */
+.identidade_do_site {
+  display: flex; /* permite alinhamento fácil */
+  align-items: center; /* centraliza verticalmente a logo */
+}
+
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
+
+/* NAV ocupa o espaço central do header */
+.navegacao {
+  flex: 1; /* ocupa o espaço disponível */
+  display: flex; /* ativa flexbox */
+  justify-content: center; /* centraliza o menu horizontalmente */
+}
+
+/* Lista do menu */
+.menu-pagina-inicial {
+  display: flex; /* itens do menu lado a lado */
+  gap: 40px; /* espaço entre os links */
+  list-style: none; /* remove bolinhas da lista */
+  font-size: 16px; /* tamanho do texto */
+  font-family: Inter; /* fonte Inter */
+}
+
+/* =========================
+   BOTÃO DE CONTATO
+   ========================= */
+
+/* Estilo base do botão */
+.botao-contato {
+  position: relative; /* referência para o ícone absoluto */
+  z-index: 1; /* base */
+  background-color: #1e8449;
+  display: inline-flex; /* permite alinhar texto e ícone */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 5px; /* espaço entre texto e ícone */
+
+  width: 120px; /* largura fixa do botão */
+  height: 44px; /* altura fixa do botão */
+
+  padding: 0 18px; /* espaçamento interno lateral */
+  border: 1.5px solid black; /* borda dourada */
+  border-radius: 8px; /* cantos arredondados */
+
+  text-decoration: none; /* remove sublinhado do link */
+  color: black; /* texto branco */
+  font-family: Inter, sans-serif;
+
+  overflow: hidden; /* esconde o ícone fora do botão */
+  transition:                /* transições suaves */
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+    
+}
+
+/* =========================
+   ÍCONE / ANIMAÇÃO DO PUNHO
+   ========================= */
+
+/* Ícone do punho */
+.icone-punho {
+  position: absolute; /* posiciona livremente dentro do botão */
+  right: 12px; /* distância da direita */
+  z-index: 2; /* entre fundo e texto */
+  bottom: -19px; /* desce o ícone (fora do botão) */
+  /* bottom: 0;              sobe o ícone */
+  /* bottom: 6px;            sobe mais */
+
+  width: 69px; /* tamanho do ícone */
+  height: auto; /* mantém proporção */
+  left: 103px;
+  opacity: 0; /* ESCONDE o ícone */
+}
+
+/* =========================
+   TEXTO DO BOTÃO
+   ========================= */
+
+/* Texto dentro do botão */
+.texto-botao {
+  position: relative; /* permite usar z-index */
+  z-index: 3; /* mantém o texto acima do ícone */
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Ao passar o mouse, move só o texto */
+.botao-contato:hover .texto-botao {
+  transform: translateX(-10px); /* empurra o texto para a esquerda */
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* =========================
+   HOVER DO BOTÃO
+   ========================= */
+
+/* Estilo do botão ao passar o mouse */
+.botao-contato:hover {
+  background-color: #fbf7f0; /* fundo claro */
+  color: black; /* texto preto */
+  border-color: black; /* borda preta */
+  background-color: #1e8449;
+
+  
+}
+
+/* Animação do ícone no hover */
+.botao-contato:hover .icone-punho {
+  opacity: 1; /* garante que fique visível */
+  transform: translateY(0); /* sobe o ícone */
+}
+
+/* =========================
+   LINKS DA NAVEGAÇÃO
+   ========================= */
+
+/* Estilo base dos links */
+nav a {
+  color: black; /* links brancos */
+  text-decoration: none; /* remove sublinhado */
+  display: inline-block; /* permite transform */
+  transition:                /* animações suaves */
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Hover dos links do menu */
+.navegacao a:hover {
+  color: #fff; /* dourado */
+  transform: scale(1.08); /* aumenta levemente */
+  will-change: transform; /* otimiza performance */
+  color:#1e8449;
+
+}
+
+/* =========================
+   LOGO DO SITE
+   ========================= */
+
+/* Imagem da logo */
+.logo_do_site {
+  max-height: 44px; /* limita a altura */
+  width: auto; /* mantém proporção */
+}
+
+/* =========================
+   IDENTIDADE VISUAL (AJUSTES)
+   ========================= */
+
+/* Ajustes finais do container da logo */
+.identidade_do_site {
+  display: flex; /* flexbox */
+  align-items: center; /* centraliza verticalmente */
+  gap: 12px; /* espaço entre itens */
+  margin-right: auto; /* empurra o menu para o centro */
+}
+
