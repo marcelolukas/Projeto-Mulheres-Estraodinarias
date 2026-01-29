@@ -40,7 +40,7 @@ assets/
     imagens dos cards
   ui/
     elementos visuais (ícones, vídeos, animações)
-```
+
 script.js
 global.css
 home.css
