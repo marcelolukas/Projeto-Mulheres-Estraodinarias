@@ -92,6 +92,8 @@
   flex-direction: column;
   gap: 10px;
   justify-content: flex-start;
+  
+  
 }
 .card.sumindo {
   opacity: 0;
@@ -141,3 +143,4 @@
   height: 29px;
   border-radius:15px;
 }
+

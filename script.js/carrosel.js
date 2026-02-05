@@ -112,3 +112,6 @@ btnAnterior.addEventListener("click", () => {
   }, DURACAO);
 });
 
+window.addEventListener("load", () => {
+  iniciarCarrossel();
+});

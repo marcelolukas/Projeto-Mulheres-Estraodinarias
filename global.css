@@ -9,6 +9,8 @@
 * {
   margin: 0; /* remove margem padrão do navegador */
   padding: 0; /* remove padding padrão do navegador */
+ 
+  
 }
 
 /* =========================
@@ -19,6 +21,7 @@
 body {
   background-color:#FFF1C1;
 ; /* fundo bege claro */
+
 }
 
 /* =========================
@@ -165,6 +168,7 @@ nav a {
   transition:                /* animações suaves */
     color 0.3s ease,
     transform 0.2s ease;
+    
 }
 
 /* Hover dos links do menu */
