@@ -188,7 +188,7 @@ territoriais, educação
 indígena, cultura e
 meio ambiente, ampliando
 a voz indígena nos
-espaços de poder..
+espaços de poder.
 `,
     imagem: "assets/mulheres/celia.png",
     tempo: "1990 — presente",
@@ -401,25 +401,4 @@ no governo federal.
     tempo: "1960 — presente",
   },
 
-  {
-    nome: "Watatakalu Yawalapiti",
-    bio: ` É uma liderança
-indígena brasileira do
-povo Yawalapiti no
-Alto Xingu. Ativista em
-defesa da cultura,
-meio ambiente e
-direitos das mulheres,
-lidera sua comunidade
-contra incêndios,
-mineração e práticas
-que ameaçam a
-cultura indígena,
-ampliando a presença
-dos povos originais
-na cena nacional.
-`,
-    imagem: "assets/mulheres/watatakalu.png",
-    tempo: "1980 — presente",
-  },
 ];

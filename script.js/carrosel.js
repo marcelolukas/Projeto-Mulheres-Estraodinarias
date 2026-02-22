@@ -28,15 +28,12 @@ function atualizarCard() {
 atualizarCard();
 
 function proximaMulher() {
-  // 1. Incrementamos o índice
-  indiceAtual++;
+  indiceAtual += 3;
 
-  // 2. Aplicamos a lógica do "if" que você aprendeu para resetar no final
-  if (indiceAtual === lista_mulheres.length) {
+  if (indiceAtual >= lista_mulheres.length) {
     indiceAtual = 0;
   }
 
-  // 3. Chamamos a função que desenha na tela
   atualizarCard();
 }
 
@@ -80,8 +77,9 @@ btnProximo.addEventListener("click", () => {
   cards.classList.add("slide-right");
 
   setTimeout(() => {
-    indiceAtual++;
-    if (indiceAtual === lista_mulheres.length) {
+    indiceAtual += 3;
+
+    if (indiceAtual >= lista_mulheres.length) {
       indiceAtual = 0;
     }
 
@@ -100,9 +98,10 @@ btnAnterior.addEventListener("click", () => {
   cards.classList.add("slide-left");
 
   setTimeout(() => {
-    indiceAtual--;
+    indiceAtual -= 3;
+
     if (indiceAtual < 0) {
-      indiceAtual = lista_mulheres.length - 1;
+        indiceAtual = lista_mulheres.length - 3;
     }
 
     atualizarCard();
