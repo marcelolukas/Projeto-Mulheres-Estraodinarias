@@ -1,33 +1,131 @@
-body {
-  background-color: rgb(255, 0, 0);
-  margin: 0;
-}
+/* INTRO PREMIUM */
+
 .intro-page {
-  border-bottom-color: #1e8449;
-
-  border-bottom-style: solid;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.content h1 {
-  position: static;
+/* IMAGEM */
 
-  margin: 30px 0px 0px 60px;
-
-  text-align: left;
-  font-size: 72px;
+.img-fundo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+  z-index: -2;
 }
 
-.content p {
-  width: 45%;
-  margin: 30px 0px 0px 60px;
-  font-family: "Roboto", sans-serif;
+/* SOBREPOSIÇÃO PROFISSIONAL */
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* CONTEÚDO CENTRALIZADO */
+
+.content {
   text-align: center;
   color: white;
-  text-align: justify;
+  max-width: 800px;
+  padding: 20px 20px;
+  margin-bottom: 300px;
 }
-.intro-page img {
+
+/* TÍTULO */
+
+.content h1 {
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* FRASE */
+
+.content blockquote {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.menu-navegacao {
+  display: flex;
+  flex-direction: column;
+  min-height: 170px;
+  list-style: none;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  position: relative;
+}
+
+/* Linha centralizada */
+
+.menu-navegacao::after {
+  content: "";
   position: absolute;
-  filter: brightness(60%);
-  width: 100%;
-  height: 91%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1470px;
+  /* controla o tamanho */
+  height: 6px;
+  /* espessura */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-navegacao a {
+  margin-left: 200px;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: Roboto;
+  color: white;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.menu-navegacao a:hover {
+  color: #fff;
+  /* dourado */
+  transform: scale(1.04);
+  /* aumenta levemente */
+  will-change: transform;
+  /* otimiza performance */
+  color: #000000;
+}
+
+.menu-navegacao ul {
+  list-style-type: none;
+}
+
+.biografia {
+  background-color: rgb(255, 153, 0);
+  padding-top: 1px;  /* controla espaço acima do título */
+  padding-bottom: 120px; /* já aproveita e dá respiro embaixo */
+}
+
+.biografia h1 {
+  margin-right: 700px;
+  text-transform: none;
+}
+
+.biografia p {
+  color: white;
+  text-align: justify;
+  margin-left: 275px;
+  width: 60%;
+  font-size: 23px;
+  font-family: Roboto;
+  margin-top: 15px;
 }
