@@ -1,6 +1,6 @@
 /* Importa a fonte Inter do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 /* =========================
    RESET GLOBAL
    ========================= */
@@ -9,8 +9,6 @@
 * {
   margin: 0; /* remove margem padrão do navegador */
   padding: 0; /* remove padding padrão do navegador */
- 
-  
 }
 
 /* =========================
@@ -19,9 +17,7 @@
 
 /* Define a cor de fundo geral da página */
 body {
-  background-color:#FFF1C1;
-; /* fundo bege claro */
-
+  background-color: #fff1c1; /* fundo bege claro */
 }
 
 /* =========================
@@ -32,9 +28,9 @@ body {
 .cabecalho {
   display: flex; /* coloca os itens lado a lado */
   align-items: center; /* alinha verticalmente no centro */
-  padding: 16px 32px; /* espaço interno (cima/baixo | lados) */
-  background-color: #ffd84d; /* fundo marrom escuro */
-  border-bottom: 2px solid #1e8449; /* linha dourada na base */
+  padding: 17px 32px; /* espaço interno (cima/baixo | lados) */
+  background-color: #e31b23; /* fundo marrom escuro */
+  border-bottom: 3px solid black; /* linha dourada na base */
 }
 
 /* =========================
@@ -64,7 +60,9 @@ body {
   gap: 40px; /* espaço entre os links */
   list-style: none; /* remove bolinhas da lista */
   font-size: 16px; /* tamanho do texto */
-  font-family: Inter; /* fonte Inter */
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 /* =========================
@@ -90,13 +88,12 @@ body {
 
   text-decoration: none; /* remove sublinhado do link */
   color: black; /* texto branco */
-  font-family: Inter, sans-serif;
+  font-family: Poppins;
 
   overflow: hidden; /* esconde o ícone fora do botão */
   transition:                /* transições suaves */
     background-color 0.2s ease,
     border-color 0.2s ease;
-    
 }
 
 /* =========================
@@ -146,8 +143,6 @@ body {
   color: black; /* texto preto */
   border-color: black; /* borda preta */
   background-color: #1e8449;
-
-  
 }
 
 /* Animação do ícone no hover */
@@ -168,7 +163,6 @@ nav a {
   transition:                /* animações suaves */
     color 0.3s ease,
     transform 0.2s ease;
-    
 }
 
 /* Hover dos links do menu */
@@ -177,7 +171,6 @@ nav a {
   transform: scale(1.08); /* aumenta levemente */
   will-change: transform; /* otimiza performance */
   color:#1e8449;
-
 }
 
 /* =========================
@@ -201,4 +194,3 @@ nav a {
   gap: 12px; /* espaço entre itens */
   margin-right: auto; /* empurra o menu para o centro */
 }
-

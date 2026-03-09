@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina Inicial</title>
+    <link rel="stylesheet" href="pagina_inicial.css" />
+    <link rel="stylesheet" href="transicao.css" />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div class="div_transicao"></div>
+
+    <header class="cabecalho">
+      <div class="identidade_do_site">
+        <img
+          class="logo_do_site"
+          src="assets/ui/logo_do_site.png"
+          alt="Logo do Site"
+        />
+      </div>
+
+      <nav class="navegacao">
+        <ul class="menu-pagina-inicial">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="Quem_Somos.html">Quem Somos</a></li>
+          <li><a href="#" class="Projetos">Projetos</a></li>
+          <li><a href="#">Eventos</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="botao-contato">
+        <span class="texto-botao">Fale Conosco</span>
+        <video
+          class="icone-punho"
+          src="assets/ui/animacao_punho.webm"
+          muted
+          playsinline
+          preload="auto"
+        ></video>
+      </a>
+    </header>
+    <main>
+      <section class="hero">
+        <img src="image.png" />
+        <div class="hero__carousel">
+          <h1>Exposição Mulheres <br />Extraordinárias</h1>
+          <p>
+            A Exposição Mulheres Extraordinárias celebra trajetórias que
+            transformaram a história por meio da coragem, da inteligência e da
+            resistência.
+          </p>
+
+          <a class="botao__carousel" href="ver_todas.html"
+            >Conheça essas Mulheres Extraordinárias</a
+          >
+        </div>
+      </section>
+
+      <section class="atividades-destaque">
+        <div class="atividades-destaque-texto">
+          <h2>Atividades em Destaque</h2>
+          <p>
+            Conheça as principais ações, projetos e eventos promovidos pelo
+            NEABI.
+          </p>
+        </div>
+
+        <div class="cards-atividades-destaque">
+          <article class="cards-atividades">
+            <div class="card-imagem">
+              <img src="image copy.png" alt="imagem mulher" />
+            </div>
+
+            <div class="card_conteudo-atividades">
+              <h2><b>Rosa Parks</b></h2>
+              <p>
+                Foi uma ativista negra norte-americana reconhecida por sua
+                coragem na luta contra o racismo, tornando-se um dos principais
+                símbolos do movimento pelos direitos civis e da resistência à
+                segregação racial nos EUA.
+              </p>
+              <a href="ver_todas.html" class="card-botao"
+                >Conheça sua trajetória</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="script.js/mulheres.js"></script>
+    <script src="script.js/carrosel.js"></script>
+    <script src="script.js/animacoes.js"></script>
+    <script src="script.js/transicao.js"></script>
+  </body>
+</html>

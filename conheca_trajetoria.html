@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="transicao.css" />
-    <link rel="stylesheet" href="ver_todas.css" />
     <link rel="stylesheet" href="conheca_trajetoria.css" />
   </head>
 
@@ -49,20 +48,13 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
       <section class="intro-page">
-        <img
-          class="img-fundo"
-          src="assets/teste.png"
-          alt="Imagem representativa"
-        />
+        <img id="img-fundo" src="" alt="Imagem representativa" />
 
         <div class="overlay"></div>
 
         <div class="content">
-          <h1 id="nome-principal">Angela Davis</h1>
-          <blockquote id="citacao-principal">
-            “Numa sociedade racista, não basta não ser racista. É necessário ser
-            antirracista.”
-          </blockquote>
+          <h1 id="nome-principal"></h1>
+          <blockquote id="citacao-principal"></blockquote>
         </div>
       </section>
     </main>
@@ -72,13 +64,14 @@
       <ul class="menu-navegacao">
         <li>
           <a href="#biografia"
-            >Um pouco sobre a vida de <span id="nome-secao">NOME</span></a
+            >Um pouco sobre a vida de <span id="nome-menu-1">NOME</span></a
           >
         </li>
         <li><a href="#tempo">Linha do Tempo</a></li>
         <li>
           <a href="#contexto"
-            >Por que <id = "nome-contexto"> NOMEa é uma mulher extraordinária?</a
+            >Por que <span id="nome-menu-2">NOME</span> é uma mulher
+            extraordinária?</a
           >
         </li>
         <li><a href="#legado">Legados</a></li>
@@ -87,14 +80,180 @@
     </nav>
 
     <section class="biografia">
-      <h1><b>Um pouco sobre a vida de Angela Davis</b></h1>
+      <h1>
+        <b>Um pouco sobre a vida de <span id="nome-titulo">Nome</span></b>
+      </h1>
 
       <div id="texto-biografia">
         <!-- O JavaScript coloca os <p> aqui dentro -->
       </div>
     </section>
+
+    <div class="carrosel-trajetoria">
+      <div class="texto-trajetoria">
+        <h1>Angela Davis</h1>
+        <p>
+          “Quando a mulher negra se movimenta, toda a estrutura da sociedade se
+          movimenta com ela”
+        </p>
+      </div>
+
+      <img class="imagem" src="assets/mulheres/celia.png" />
+    </div>
+
+    <section class="linha-do-tempo">
+      <h2>Linha do Tempo</h2>
+      <p>
+        1907 - Magdalena Carmen Fridakahlo Calderón nasce em 6 de julho na
+        Cidade do México;
+      </p>
+      <p>
+        1913 - aos 6 anos de idade contraiu poliomielite, doença que deixa
+        sequelas em sua perna direita, motivo de chacotas;
+      </p>
+      <p>
+        1922 - ingressou na Escola Nacional Preparatória, onde teve o primeiro
+        contato com ideais a frente seu tempo, impulsionados pela Revolução
+        Mexicana;
+      </p>
+
+      <p>
+        1925 - sofreu um trágico acidente de ônibus, no qual fraturou vários
+        ossos e a espinha dorsal. Em decorrência disso, ficou imobilizada por
+        vários meses e durante esse período começou a pintar;
+      </p>
+
+      <p>
+        1929 - casou-se com o reconhecido artista Diego Rivera, o qual conheceu
+        após frequentar círculos artísticos e sociais mexicanos;
+      </p>
+      <p>
+        1930 - 1933 - viveu com seu companheiro em diferentes cidades dos EUA.
+        Durante esse período sofre seu primeiro aborto (1930) e o falecimento de
+        sua mãe (1932);
+      </p>
+
+      <p>
+        1937 - junto a seu companheiro acolhe em sua casa o líder comunista Leon
+        Trotsky e sua esposa, Natália. Frida além de uma intensa vida artística,
+        foi uma grande ativista política e integrante do Partido Comunista
+        Mexicano;
+      </p>
+
+      <p>
+        1938 - realizou a primeira exposição individual na Galeria Juelin Levy
+        em Nova York;
+      </p>
+
+      <p>
+        1939 - integrou a exposição Mexique na Galeria Renon et Colle de Paris.
+        Neste ano também se divorciou de seu companheiro. O relacionamento era
+        bastante conflituoso, em especial, devido a infidelidade de Diego que
+        desencadeou uma série de crises emocionais na artista;
+      </p>
+      <p>
+        1940 - casou-se novamente com Diego Rivera sob o acordo de vidas sexuais
+        autônomas. Também integra as exposições Vinte Séculos de Arte Mexicana
+        no Museu de Arte Moderna de Nova York e Internacional de Surrealistas da
+        Galeria de Arte Mexicana Inés Amor;
+      </p>
+    </section>
+
+    <section class="motivos-extraordinaria">
+      <div class="texto-motivos-extraordinaria">
+        <h3>Por que Dandara é uma mulher extraordinária?</h3>
+        <p>
+          A existência de Dandara é um dos maiores atos de resistência ao
+          sistema escravocrata. Sua luta pela liberdade do povo negro foi
+          extraordinária e inspira a todos/as no combate ao racismo.
+        </p>
+      </div>
+    </section>
+
+    <section class="legado">
+      <div class="legado-texto">
+        <h4>Legados</h4>
+        <p>
+          Sua vida e luta são seus legados. Os mesmos são expoentes da luta
+          antirracista, em especial o Feminismo Negro, ao qual também servem de
+          exemplo de mulher negra protagonista de seu tempo.
+        </p>
+      </div>
+    </section>
+
+    <section class="referencias">
+      <div class="referencias-texto">
+        <h5>Referencias</h5>
+        <p>
+          Kleber Henrique. Dandara: A Face Feminina de Palmares. Portal Geledes.
+          2011. Disponível em:
+          <https://www.geledes.org.br/dandara-a-face-feminina-de-palmares/>
+        </p>
+      </div>
+    </section>
+
+    <section class="veja-tambem">
+      <h3>Veja também</h3>
+      <div class ="card-mulheres">
+        <article class="cards">
+        <div class="card-imagem">
+          <img src="assets/mulheres/rosa.png" width="30%" alt="imagem mulher" />
+        </div>
+
+        <div class="card_conteudo">
+          <p class="linha texto-2"><b>Rosa Parks</b></p>
+          
+          <a href="ver_todas.html" class="card-botao">Conheça sua trajetória</a>
+        </div>
+      </article>
+      <article class="cards">
+        <div class="card-imagem">
+          <img src="assets/mulheres/rosa.png" width="30%" alt="imagem mulher" />
+        </div>
+
+        <div class="card_conteudo">
+          <p class="linha texto-2"><b>Rosa Parks</b></p>
+         
+          <a href="ver_todas.html" class="card-botao">Conheça sua trajetória</a>
+        </div>
+      </article>
+      <article class="cards">
+        <div class="card-imagem">
+          <img src="assets/mulheres/rosa.png" width="30%" alt="imagem mulher" />
+        </div>
+
+        <div class="card_conteudo">
+          <p class="linha texto-2"><b>Rosa Parks</b></p>
+        
+          <a href="ver_todas.html" class="card-botao">Conheça sua trajetória</a>
+        </div>
+      </article>
+      <article class="cards">
+        <div class="card-imagem">
+          <img src="assets/mulheres/rosa.png" width="30%" alt="imagem mulher" />
+        </div>
+
+        <div class="card_conteudo">
+          <p class="linha texto-2"><b>Rosa Parks</b></p>
+          
+          <a href="ver_todas.html" class="card-botao">Conheça sua trajetória</a>
+        </div>
+      </article>
+    </section>
+      </div>
+      
     <!-- SCRIPTS -->
     <script src="script.js/transicao.js"></script>
     <script src="script.js/animacoes.js"></script>
+
+    <!-- 1º Carrega os dados das mulheres -->
+    <script src="script.js/dados_perfil.js"></script>
+    <!-- 2º Carrega a lógica da página (que antes chamamos de perfil.js) -->
+
+    <script src="script.js/perfil.js"></script>
+
+    <script>
+      "carrosel_trajetoria_page.js";
+    </script>
   </body>
 </html>

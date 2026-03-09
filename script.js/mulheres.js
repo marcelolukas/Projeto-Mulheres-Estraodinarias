@@ -52,7 +52,7 @@ anos 1970 por suas ideias,
 teve sua prisão transformada
 em um movimento mundial de
 solidariedade e resistência`,
-    imagem: "assets/mulheres/Davis.png",
+    imagem: "assets/mulheres/teste.png",
     tempo: "1944 — presente",
   },
 
