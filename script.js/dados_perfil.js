@@ -11,6 +11,8 @@ const detalhes_mulheres = [
 
     carrosel_img_1: "assets / teste.png1",
     carrosel_img_2: "assets / teste.png",
-    carrosel_img_3:"assets/teste.png",
+    carrosel_img_3: "assets/teste.png",
   },
 ];
+
+

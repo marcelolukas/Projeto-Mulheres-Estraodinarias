@@ -1,196 +1,239 @@
-/* Importa a fonte Inter do Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Importa a fonte Poppins do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 /* =========================
    RESET GLOBAL
    ========================= */
 
-/* Remove margens e espaçamentos padrão de TODOS os elementos */
+/* Remove margens e paddings padrão do navegador
+   e garante que width/height incluam bordas e padding */
 * {
-  margin: 0; /* remove margem padrão do navegador */
-  padding: 0; /* remove padding padrão do navegador */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* =========================
-   ESTILO GERAL DA PÁGINA
+   BODY
    ========================= */
 
-/* Define a cor de fundo geral da página */
+/* Cor de fundo do site */
 body {
-  background-color: #fff1c1; /* fundo bege claro */
+  background-color: #fff1c1;
 }
 
 /* =========================
-   CABEÇALHO DO SITE
+   HEADER
    ========================= */
 
-/* Container principal do header */
+/* Container principal do cabeçalho */
 .cabecalho {
-  display: flex; /* coloca os itens lado a lado */
-  align-items: center; /* alinha verticalmente no centro */
-  padding: 17px 32px; /* espaço interno (cima/baixo | lados) */
-  background-color: #e31b23; /* fundo marrom escuro */
-  border-bottom: 3px solid black; /* linha dourada na base */
+  display: flex; /* ativa layout flexível */
+  align-items: center; /* alinha verticalmente */
+  padding: 17px 32px; /* espaço interno */
+  background-color: #e31b23;
+  border-bottom: 3px solid black;
+
+  flex-wrap: wrap; 
+  /* 🔥 ESSENCIAL:
+     permite quebrar linha no mobile */
 }
 
 /* =========================
-   LOGO / IDENTIDADE
+   LOGO
    ========================= */
 
-/* Container da logo */
+/* Agrupa logo + nome */
 .identidade_do_site {
-  display: flex; /* permite alinhamento fácil */
-  align-items: center; /* centraliza verticalmente a logo */
+  display: flex;
+  align-items: center;
+  gap: 12px; /* espaço entre elementos */
+}
+
+/* Define tamanho da logo */
+.logo_do_site {
+  max-height: 44px;
+  width: auto; /* mantém proporção */
 }
 
 /* =========================
-   NAVEGAÇÃO
+   NAV (MENU CENTRAL)
    ========================= */
 
-/* NAV ocupa o espaço central do header */
+/* Faz o menu ocupar o espaço central */
 .navegacao {
-  flex: 1; /* ocupa o espaço disponível */
-  display: flex; /* ativa flexbox */
-  justify-content: center; /* centraliza o menu horizontalmente */
+  display: flex;
+  justify-content: center; /* centraliza */
+  flex: 1; 
+  /* 🔥 ESSENCIAL:
+     ocupa espaço entre logo e botão */
 }
 
 /* Lista do menu */
 .menu-pagina-inicial {
-  display: flex; /* itens do menu lado a lado */
-  gap: 40px; /* espaço entre os links */
-  list-style: none; /* remove bolinhas da lista */
-  font-size: 16px; /* tamanho do texto */
+  display: flex;
+  gap: 40px; /* espaço entre links */
+  list-style: none;
+
+  font-size: 16px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+}
+
+/* LINKS */
+
+nav a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+/* efeito hover */
+.navegacao a:hover {
+  transform: scale(1.08);
+  color: #1e8449;
 }
 
 /* =========================
    BOTÃO DE CONTATO
    ========================= */
 
-/* Estilo base do botão */
+/* Botão principal */
 .botao-contato {
-  position: relative; /* referência para o ícone absoluto */
-  z-index: 1; /* base */
+  position: relative; /* permite posicionar o ícone dentro */
+  z-index: 1;
+
   background-color: #1e8449;
-  display: inline-flex; /* permite alinhar texto e ícone */
-  align-items: center; /* centraliza verticalmente */
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 5px; /* espaço entre texto e ícone */
 
-  width: 120px; /* largura fixa do botão */
-  height: 44px; /* altura fixa do botão */
+  display: inline-flex; /* melhor que flex pra botão */
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 
-  padding: 0 18px; /* espaçamento interno lateral */
-  border: 1.5px solid black; /* borda dourada */
-  border-radius: 8px; /* cantos arredondados */
+  height: 44px;
 
-  text-decoration: none; /* remove sublinhado do link */
-  color: black; /* texto branco */
+  padding: 0 40px 0 18px;
+  /* 🔥 IMPORTANTE:
+     mais espaço à direita pro ícone não invadir o texto */
+
+  border: 1.5px solid black;
+  border-radius: 8px;
+
+  text-decoration: none;
+  color: black;
   font-family: Poppins;
 
-  overflow: hidden; /* esconde o ícone fora do botão */
-  transition:                /* transições suaves */
+  overflow: hidden; 
+  /* esconde o ícone quando está fora */
+
+  transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
+
+  margin-left: auto;
+  /* 🔥 empurra o botão pra direita */
+
+  width: auto;
+  min-width: 120px;
+  /* 🔥 deixa o botão adaptável (responsivo) */
 }
 
 /* =========================
-   ÍCONE / ANIMAÇÃO DO PUNHO
+   ÍCONE DO BOTÃO
    ========================= */
 
-/* Ícone do punho */
+/* Ícone animado (punho) */
 .icone-punho {
-  position: absolute; /* posiciona livremente dentro do botão */
-  right: 12px; /* distância da direita */
-  z-index: 2; /* entre fundo e texto */
-  bottom: -19px; /* desce o ícone (fora do botão) */
-  /* bottom: 0;              sobe o ícone */
-  /* bottom: 6px;            sobe mais */
+  position: absolute;
 
-  width: 69px; /* tamanho do ícone */
-  height: auto; /* mantém proporção */
-  left: 103px;
-  opacity: 0; /* ESCONDE o ícone */
+  right: 10px; 
+  /* fixa no lado direito do botão */
+
+  bottom: -20px;
+  /* começa abaixo do botão */
+
+  width: 60px;
+  height: auto;
+
+  opacity: 0;
+  /* começa invisível */
+
+  transform: translate(40px, 20px);
+  /* 🔥 MUITO IMPORTANTE:
+     começa fora do botão (direita + baixo) */
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* =========================
    TEXTO DO BOTÃO
    ========================= */
 
-/* Texto dentro do botão */
 .texto-botao {
-  position: relative; /* permite usar z-index */
-  z-index: 3; /* mantém o texto acima do ícone */
-  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  z-index: 3;
+
+  white-space: nowrap;
+  /* 🔥 impede quebra de linha */
+
+  transition: transform 0.25s ease;
 }
 
-/* Ao passar o mouse, move só o texto */
+/* Quando passa o mouse */
 .botao-contato:hover .texto-botao {
-  transform: translateX(-10px); /* empurra o texto para a esquerda */
-  font-weight: 600;
-  font-size: 16px;
+  transform: translateX(-10px);
+  /* texto vai levemente pra esquerda */
 }
 
-/* =========================
-   HOVER DO BOTÃO
-   ========================= */
-
-/* Estilo do botão ao passar o mouse */
+/* Hover do botão */
 .botao-contato:hover {
-  background-color: #fbf7f0; /* fundo claro */
-  color: black; /* texto preto */
-  border-color: black; /* borda preta */
   background-color: #1e8449;
+  border-color: black;
 }
 
-/* Animação do ícone no hover */
+/* Animação do ícone */
 .botao-contato:hover .icone-punho {
-  opacity: 1; /* garante que fique visível */
-  transform: translateY(0); /* sobe o ícone */
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  /* 🔥 entra da direita pra dentro */
 }
 
 /* =========================
-   LINKS DA NAVEGAÇÃO
+   RESPONSIVIDADE (MOBILE)
    ========================= */
 
-/* Estilo base dos links */
-nav a {
-  color: black; /* links brancos */
-  text-decoration: none; /* remove sublinhado */
-  display: inline-block; /* permite transform */
-  transition:                /* animações suaves */
-    color 0.3s ease,
-    transform 0.2s ease;
-}
+@media (max-width: 768px) {
 
-/* Hover dos links do menu */
-.navegacao a:hover {
-  color: #fff; /* dourado */
-  transform: scale(1.08); /* aumenta levemente */
-  will-change: transform; /* otimiza performance */
-  color:#1e8449;
-}
+  .cabecalho {
+    flex-direction: column;
+    /* 🔥 muda de linha horizontal → vertical */
 
-/* =========================
-   LOGO DO SITE
-   ========================= */
+    gap: 15px;
+  }
 
-/* Imagem da logo */
-.logo_do_site {
-  max-height: 44px; /* limita a altura */
-  width: auto; /* mantém proporção */
-}
+  .identidade_do_site {
+    width: 100%;
+    justify-content: center;
+    /* centraliza logo */
+  }
 
-/* =========================
-   IDENTIDADE VISUAL (AJUSTES)
-   ========================= */
+  .navegacao {
+    width: 100%;
+  }
 
-/* Ajustes finais do container da logo */
-.identidade_do_site {
-  display: flex; /* flexbox */
-  align-items: center; /* centraliza verticalmente */
-  gap: 12px; /* espaço entre itens */
-  margin-right: auto; /* empurra o menu para o centro */
+  .menu-pagina-inicial {
+    flex-direction: column;
+    /* 🔥 menu vira vertical */
+
+    align-items: center;
+    gap: 15px;
+  }
+
+  .botao-contato {
+    margin: 10px auto 0;
+    /* centraliza botão no mobile */
+  }
 }

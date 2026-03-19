@@ -11,12 +11,17 @@
   padding: 0; /* remove padding padrão do navegador */
 }
 
+a{
+  text-decoration: none;
+  list-style: none;
+}
 /* =========================
    ESTILO GERAL DA PÁGINA
    ========================= */
 
 /* Define a cor de fundo geral da página */
 body {
+  font-family: Roboto;
   background-color: #fff1c1; /* fundo bege claro */
 }
 
@@ -124,6 +129,7 @@ body {
   position: relative; /* permite usar z-index */
   z-index: 3; /* mantém o texto acima do ícone */
   transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  text-decoration: none;
 }
 
 /* Ao passar o mouse, move só o texto */
@@ -131,6 +137,8 @@ body {
   transform: translateX(-10px); /* empurra o texto para a esquerda */
   font-weight: 600;
   font-size: 16px;
+
+  text-decoration: none;
 }
 
 /* =========================
@@ -196,17 +204,18 @@ nav a {
 }
 .hero {
   position: relative;
-  height: 600px;
+  height: 76vh;
+  width: 100%;
   overflow: hidden;
+  
 }
 
 .hero img {
   position: absolute;
-  width: 1900px;
-  height: 600px;
-  object-fit: cover;
-  margin-bottom: 200px;
-}
+  width: 100%;
+  height: 105%;
+object-position: 30% center;}
+
 
 .hero__carousel {
   position: relative;
@@ -240,13 +249,13 @@ nav a {
   width: 300px;
   margin-top: 40px;
 
-  color: black;
+  color: white;
   background-color: #055f23;
 
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 6px;
-
+  font-weight: 600;
   display: flex;
   justify-content: center;
 }
@@ -254,47 +263,265 @@ nav a {
 .botao__carousel:hover {
   transform: scale(1.03);
   transition: 0.3s;
+  font-size: 17px;
+    width: 315px;
+
 }
 .atividades-destaque {
   text-align: center;
   color: white;
-  background-color: black;
-  padding: 60px 0;
+  background-color: #e31b23;
+  padding: 30px ;
+  border-bottom-style: solid;
+  border-color: aqua;
+  border-top: solid black 3px;
+  
 }
-.atividades-destaque h2 {
+
+
+.atividades-destaque-texto h2 {
+  font-size: 26px;
   margin-bottom: 10px;
+  font-weight: 700;  
+  padding-top:2%;
+  
+
+}
+
+.atividades-destaque-texto p {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, transparent, white , transparent) 1;
+}
+
+
+
+.semana-raizes-negras{
+    background-color: #055f23;
+  color: white;
+  padding: 30px 0;
+  margin-top:8%;
+  
+
+}
+.semana-raizes-negras h3{
+ font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: 700;  
+}
+
+.semana-raizes-negras p {
+  font-size: 16px;
+  font-weight: 700;
+  margin:2%;
+  
 }
 
 .cards-atividades-destaque {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  background-color: #055f23;
-  margin-top: 50px;
-  width: 95%;
-  margin: 3%;
+  gap:1em;
+  background-color:#e31b23;
+    flex: 0 0 5em;
+    
+ 
 }
 
+
 .cards-atividades {
-  width: 40%;
-  height: 450px;
-  border-radius: 12px;
-  background-color: #ad3b07;
-  overflow: hidden;
+  width: 700px;
+  height: 650px;
+  border-radius: 5%;
+  background-color:black;
   display: flex;
   flex-direction: column;
   margin: 3%;
+  margin-top:1%;
+  border-color: black;
+  border-width: 3px;
+  border-style: inset;
+  
 }
 
 .card-imagem {
-  width:800px;
-  height: 220px;
-  background-color: #ad3b07;
+  width:595px;
+  height: 350px;
+   border-radius: 6%;
+  }
+
+.card-imagem-second {
+  width:595px;
+  height: 350px;
+}
+
+
+
+.card-imagem-second img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6%;
 }
 
 .card-imagem img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100%; 
+  border-radius: 6%;
+
+}
+
+
+.card_conteudo-atividades h2 {
+  padding-top: 3%;
+  color: white;
+  text-align: start;
+  padding-left:3%;
+}
+.card_conteudo-atividades p {
+  color: white;
+  text-align: start;
+  padding-top:1%;
+    padding-left:3%;
+    padding-right: 3%;
+
+}
+
+.card-botao {
+  padding: 10px;
+  width: 150px;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 6px;
+  display: flex;
+  margin-left: 33%;
+  margin-top:4%;
+  border-radius: 5px;
+
+  background-color:#055f23;
+
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-botao:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+  font-size: 17px;
+    width: 170px;
+  font-weight: 700;
+  background-color: #055f23;
+    border-radius: 14px;
+
+  translate: (-25px);
+}
+
+.card-botao p {
+  font-family:roboto;
+  font-size:16px;
+  color:white;
+  font-weight: 700;
+}
+
+.eventos-semana-raizes-negras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#055f23;
+  width: 100%;
+  border-radius: 4%;
+}
+
+.container-cards-eventos {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+.eventos-semana-raizes-negras-titulo {
+   font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: 700; 
+  margin-top:2%;
+}
+
+
+
+.eventos-semana-raizes-negras-descricao {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, transparent, white , transparent) 1;
+}
+
+.cards-atividades-semana-raizes-negras{
+  width: 380px;
+  height:520px;
+  border-radius: 5%;
+  background-color:black;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  border-color: black;
+  border-width: 3px;
+  border-style: inset;
+}
+
+.cards-atividades-semana-raizes-negras:hover{
+     transform: translateY(-15px);
+  transition: 0.3s;
+}
+
+.card-imagem-semana-raizes-negras {
+  width:100%;
+   border-radius: 6%;
+}
+.card-imagem-semana-raizes-negras img{
+  width: 300px;
+  height: 300px;
+   border-radius: 6%;
+   margin-top: 3%;
+}
+
+.card_conteudo-atividades-semana-raizes-negras{
+  color: white;
+  text-align: start;
+  padding-left:3%;
+  margin-top: 1%;
+}
+
+.card_conteudo-atividades-semana-raizes-negras p {
+  text-align: start;
+  padding-top:1%;
+    padding-left:3%;
+    padding-right: 3%;
+  margin-top: 1%;
+}
+
+.card_conteudo-atividades-semana-raizes-negras h2 {
+  padding-top: 3%;
+  padding-left:3%;
+  text-align: start;
+}
+
+.card-botao-semana-raizes-negras {
+  padding: 5px;
+  width: 100px;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 6px;
+  display: flex;
+  margin-left: 29%;
+  margin-top:4%;
+  border-radius: 5px;
+  color: white;
+  background-color:#055f23;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
 }

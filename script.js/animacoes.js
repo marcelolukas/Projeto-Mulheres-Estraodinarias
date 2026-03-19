@@ -21,3 +21,4 @@ const bgVideo = document.querySelector(".bg-video");
 if (bgVideo) {
   bgVideo.playbackRate = 0.7;
 }
+
