@@ -13,16 +13,21 @@
 
 .texto-principal {
   flex: 1;
-  color: #2b1b12;
+  color: #171512;
   line-height: 1.2;
   font-family: Roboto;
   margin-left: 0;
   max-width: 60%;
   margin-top: 40px;
+  padding: 28px 0;
 }
 .texto-principal .titulo {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.02;
+  max-width: 14ch;
+  border-left: 8px solid #c11f26;
+  padding-left: 18px;
 }
 .texto-principal p {
   font-size: 18px;
@@ -34,10 +39,10 @@
 
 .texto-principal .botao {
   text-decoration: none; /* Tira o sublinhado */
-  background-color: #1e8449;
-  color: black;
+  background: linear-gradient(135deg, #0f6b37, #094a26);
+  color: white;
   padding: 13px 32px; /* Como você colocaria os valores de 10px e 20px aqui? */
-  border-radius: 4px;
+  border-radius: 8px;
   display: inline-block; /* Importante para o padding funcionar bem em links */
   font-family: Roboto;
   font-weight: 600;
@@ -59,8 +64,10 @@
   display: flex; /* Ativa o flexbox para os cards filhos */
   flex-direction: column; /* Coloca um card abaixo do outro */
   gap: 35px; /* O espaço de respiro entre os cards */
-  background-color: #ffd84d;
-  border-radius: 25px;
+  background:
+    linear-gradient(180deg, #111111 0%, #1d1d1d 100%);
+  border-top: 8px solid #c11f26;
+  border-radius: 0 0 20px 20px;
   margin-bottom: 20px;
   padding: 20px 16px;
   margin-left: auto;
@@ -84,6 +91,8 @@
 .card-item {
   display: flex;
   gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(224, 187, 79, 0.18);
 }
 
 .card-conteudo {
@@ -101,13 +110,12 @@
 }
 .card-conteudo p {
   font-size: 14px;
-
-  color: #3a2a1a;
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.6;
 }
 
 .card-conteudo time {
-  color: #999999; /* Um cinza bem mais claro para a data */
+  color: #e0bb4f; /* destaque quente */
   font-size: 12px;
   align-self: flex-start;
 }
@@ -115,6 +123,7 @@
   font-family: Roboto;
   font-size: 21px;
   font-weight: 700;
+  color: #f7f0d8;
 }
 
 .card-imagem img {
@@ -122,7 +131,7 @@
   width: 160px;
   height: 160px;
   object-fit: cover;
-  border-radius: 15px; /* Opcional: para deixar os cantos arredondados como no Figma */
+  border-radius: 8px;
 }
 
 .controles{
@@ -137,10 +146,12 @@
   transform: scale(0.95);
 }
 #btn-pause, #btn-anterior, #btn-proximo{
-  background-color:#1e8449;
+  background: linear-gradient(135deg, #c11f26, #8f131a);
+  color: white;
+  border: 1px solid #111111;
   transition: transform 0.1s ease;
   width: 100px;
   height: 29px;
-  border-radius:15px;
+  border-radius: 6px;
 }
 

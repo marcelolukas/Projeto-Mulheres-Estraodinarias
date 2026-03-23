@@ -54,4 +54,3 @@ function slideShow2() {
 
 // executa a cada 1.5 segundos
 setInterval(slideShow2, 5000);
-

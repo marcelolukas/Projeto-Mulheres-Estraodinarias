@@ -12,7 +12,7 @@
 
 .texto-principal {
   flex: 1;
-  color: #2b1b12;
+  color: #171512;
   line-height: 1.2;
   font-family: Roboto;
   margin-left: 0;
@@ -33,8 +33,8 @@
 
 .texto-principal .botao {
   text-decoration: none; /* Tira o sublinhado */
-  background-color: #1e8449;
-  color: black;
+  background: linear-gradient(135deg, #0f6b37, #094a26);
+  color: white;
   padding: 13px 32px; /* Como você colocaria os valores de 10px e 20px aqui? */
   border-radius: 4px;
   display: inline-block; /* Importante para o padding funcionar bem em links */
@@ -58,7 +58,8 @@
   display: flex; /* Ativa o flexbox para os cards filhos */
   flex-direction: column; /* Coloca um card abaixo do outro */
   gap: 35px; /* O espaço de respiro entre os cards */
-  background-color: #ffd84d;
+  background:
+    linear-gradient(180deg, #111111 0%, #1d1d1d 100%);
   border-radius: 25px;
   margin-bottom: 20px;
   padding: 20px 16px;
@@ -95,13 +96,12 @@
 }
 .card-conteudo p {
   font-size: 14px;
-
-  color: #3a2a1a;
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.6;
 }
 
 .card-conteudo time {
-  color: #999999; /* Um cinza bem mais claro para a data */
+  color: #e0bb4f; /* destaque quente */
   font-size: 12px;
   align-self: flex-start;
 }
@@ -109,6 +109,7 @@
   font-family: Roboto;
   font-size: 21px;
   font-weight: 700;
+  color: #f7f0d8;
 }
 
 .card-imagem img {
@@ -132,7 +133,9 @@
 #btn-pause,
 #btn-anterior,
 #btn-proximo {
-  background-color: #1e8449;
+  background: linear-gradient(135deg, #c11f26, #8f131a);
+  color: white;
+  border: 1px solid #111111;
   transition: transform 0.1s ease;
   width: 100px;
   height: 29px;

@@ -1,527 +1,518 @@
-/* Importa a fonte Inter do Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap");
+
 /* =========================
-   RESET GLOBAL
+   BASE
    ========================= */
 
-/* Remove margens e espaçamentos padrão de TODOS os elementos */
-* {
-  margin: 0; /* remove margem padrão do navegador */
-  padding: 0; /* remove padding padrão do navegador */
-}
-
-a{
-  text-decoration: none;
-  list-style: none;
-}
-/* =========================
-   ESTILO GERAL DA PÁGINA
-   ========================= */
-
-/* Define a cor de fundo geral da página */
 body {
-  font-family: Roboto;
-  background-color: #fff1c1; /* fundo bege claro */
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(193, 31, 38, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(15, 107, 55, 0.12), transparent 24%),
+    linear-gradient(180deg, #f2e3b0 0%, #e5cb86 100%);
 }
 
-/* =========================
-   CABEÇALHO DO SITE
-   ========================= */
-
-/* Container principal do header */
-.cabecalho {
-  display: flex; /* coloca os itens lado a lado */
-  align-items: center; /* alinha verticalmente no centro */
-  padding: 17px 32px; /* espaço interno (cima/baixo | lados) */
-  background-color: #e31b23; /* fundo marrom escuro */
-  border-bottom: 3px solid black; /* linha dourada na base */
+main {
+  width: 100%;
 }
 
-/* =========================
-   LOGO / IDENTIDADE
-   ========================= */
-
-/* Container da logo */
-.identidade_do_site {
-  display: flex; /* permite alinhamento fácil */
-  align-items: center; /* centraliza verticalmente a logo */
-}
-
-/* =========================
-   NAVEGAÇÃO
-   ========================= */
-
-/* NAV ocupa o espaço central do header */
-.navegacao {
-  flex: 1; /* ocupa o espaço disponível */
-  display: flex; /* ativa flexbox */
-  justify-content: center; /* centraliza o menu horizontalmente */
-}
-
-/* Lista do menu */
-.menu-pagina-inicial {
-  display: flex; /* itens do menu lado a lado */
-  gap: 40px; /* espaço entre os links */
-  list-style: none; /* remove bolinhas da lista */
-  font-size: 16px; /* tamanho do texto */
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-}
-
-/* =========================
-   BOTÃO DE CONTATO
-   ========================= */
-
-/* Estilo base do botão */
-.botao-contato {
-  position: relative; /* referência para o ícone absoluto */
-  z-index: 1; /* base */
-  background-color: #1e8449;
-  display: inline-flex; /* permite alinhar texto e ícone */
-  align-items: center; /* centraliza verticalmente */
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 5px; /* espaço entre texto e ícone */
-
-  width: 120px; /* largura fixa do botão */
-  height: 44px; /* altura fixa do botão */
-
-  padding: 0 18px; /* espaçamento interno lateral */
-  border: 1.5px solid black; /* borda dourada */
-  border-radius: 8px; /* cantos arredondados */
-
-  text-decoration: none; /* remove sublinhado do link */
-  color: black; /* texto branco */
-  font-family: Poppins;
-
-  overflow: hidden; /* esconde o ícone fora do botão */
-  transition:                /* transições suaves */
-    background-color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-/* =========================
-   ÍCONE / ANIMAÇÃO DO PUNHO
-   ========================= */
-
-/* Ícone do punho */
-.icone-punho {
-  position: absolute; /* posiciona livremente dentro do botão */
-  right: 12px; /* distância da direita */
-  z-index: 2; /* entre fundo e texto */
-  bottom: -19px; /* desce o ícone (fora do botão) */
-  /* bottom: 0;              sobe o ícone */
-  /* bottom: 6px;            sobe mais */
-
-  width: 69px; /* tamanho do ícone */
-  height: auto; /* mantém proporção */
-  left: 103px;
-  opacity: 0; /* ESCONDE o ícone */
-}
-
-/* =========================
-   TEXTO DO BOTÃO
-   ========================= */
-
-/* Texto dentro do botão */
-.texto-botao {
-  position: relative; /* permite usar z-index */
-  z-index: 3; /* mantém o texto acima do ícone */
-  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+a {
   text-decoration: none;
 }
 
-/* Ao passar o mouse, move só o texto */
-.botao-contato:hover .texto-botao {
-  transform: translateX(-10px); /* empurra o texto para a esquerda */
-  font-weight: 600;
-  font-size: 16px;
-
-  text-decoration: none;
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* =========================
-   HOVER DO BOTÃO
+   HERO
    ========================= */
 
-/* Estilo do botão ao passar o mouse */
-.botao-contato:hover {
-  background-color: #fbf7f0; /* fundo claro */
-  color: black; /* texto preto */
-  border-color: black; /* borda preta */
-  background-color: #1e8449;
-}
-
-/* Animação do ícone no hover */
-.botao-contato:hover .icone-punho {
-  opacity: 1; /* garante que fique visível */
-  transform: translateY(0); /* sobe o ícone */
-}
-
-/* =========================
-   LINKS DA NAVEGAÇÃO
-   ========================= */
-
-/* Estilo base dos links */
-nav a {
-  color: black; /* links brancos */
-  text-decoration: none; /* remove sublinhado */
-  display: inline-block; /* permite transform */
-  transition:                /* animações suaves */
-    color 0.3s ease,
-    transform 0.2s ease;
-}
-
-/* Hover dos links do menu */
-.navegacao a:hover {
-  color: #fff; /* dourado */
-  transform: scale(1.08); /* aumenta levemente */
-  will-change: transform; /* otimiza performance */
-  color:#1e8449;
-}
-
-/* =========================
-   LOGO DO SITE
-   ========================= */
-
-/* Imagem da logo */
-.logo_do_site {
-  max-height: 44px; /* limita a altura */
-  width: auto; /* mantém proporção */
-}
-
-/* =========================
-   IDENTIDADE VISUAL (AJUSTES)
-   ========================= */
-
-/* Ajustes finais do container da logo */
-.identidade_do_site {
-  display: flex; /* flexbox */
-  align-items: center; /* centraliza verticalmente */
-  gap: 12px; /* espaço entre itens */
-  margin-right: auto; /* empurra o menu para o centro */
-}
 .hero {
   position: relative;
-  height: 76vh;
   width: 100%;
+  min-height: clamp(420px, 68vh, 680px);
   overflow: hidden;
-  
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 11, 11, 0.72) 0%, rgba(11, 11, 11, 0.3) 46%, rgba(11, 11, 11, 0.1) 100%),
+    radial-gradient(circle at 18% 24%, rgba(193, 31, 38, 0.38), transparent 28%);
+  z-index: 1;
 }
 
 .hero img {
   position: absolute;
+  inset: 0;
   width: 100%;
-  height: 105%;
-object-position: 30% center;}
-
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
 
 .hero__carousel {
-  position: relative;
+  position: absolute;
   z-index: 2;
+  top: 50%;
+  left: clamp(20px, 8vw, 92px);
+  transform: translateY(-50%);
+  width: min(92vw, 680px);
+  padding: clamp(24px, 4vw, 38px);
+  color: #171512;
+  border-top: 10px solid #c11f26;
+  border-radius: 0 0 24px 24px;
+  background: rgba(250, 244, 225, 0.95);
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.18);
+}
 
-  display: flex;
-  flex-direction: column;
-
-  color: white;
-
-  padding-top: 60px;
-  padding-left: 70px;
+.hero__carousel::before {
+  content: "NEABI em destaque";
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  margin-bottom: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #111111;
+  border-radius: 4px;
 }
 
 .hero__carousel h1 {
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: 700;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
 }
+
 .hero__carousel p {
-  max-width: 1000px;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 0px;
-  font-size: 1.25rem;
-  max-width: 672px;
-  margin-top: 14px;
+  max-width: 58ch;
+  margin: 20px 0 0;
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  line-height: 1.8;
+  color: #433328;
 }
 
 .botao__carousel {
-  padding: 17px;
-  width: 300px;
-  margin-top: 40px;
-
-  color: white;
-  background-color: #055f23;
-
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  min-height: 58px;
+  width: min(100%, 360px);
+  margin-top: 28px;
+  padding: 16px 24px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f6b37, #094a26);
+  border-radius: 16px;
+  box-shadow: 0 16px 30px rgba(16, 98, 47, 0.25);
+  transition:
+    transform 220ms ease,
+    filter 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .botao__carousel:hover {
-  transform: scale(1.03);
-  transition: 0.3s;
-  font-size: 17px;
-    width: 315px;
-
+  transform: translateY(-3px);
+  filter: brightness(1.04);
+  box-shadow: 0 22px 34px rgba(16, 98, 47, 0.32);
 }
+
+/* =========================
+   SECAO DESTAQUE
+   ========================= */
+
 .atividades-destaque {
+  position: relative;
+  padding: clamp(28px, 4vw, 56px);
+  color: white;
   text-align: center;
-  color: white;
-  background-color: #e31b23;
-  padding: 30px ;
-  border-bottom-style: solid;
-  border-color: aqua;
-  border-top: solid black 3px;
-  
+  background:
+    linear-gradient(180deg, #c11f26 0%, #8f131a 100%);
+  border-top: 3px solid #111111;
 }
 
-
-.atividades-destaque-texto h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
-  font-weight: 700;  
-  padding-top:2%;
-  
-
-}
-
-.atividades-destaque-texto p {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 60px;
-  padding-bottom: 25px;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, transparent, white , transparent) 1;
-}
-
-
-
-.semana-raizes-negras{
-    background-color: #055f23;
-  color: white;
-  padding: 30px 0;
-  margin-top:8%;
-  
-
-}
-.semana-raizes-negras h3{
- font-size: 26px;
-  margin-bottom: 10px;
-  font-weight: 700;  
-}
-
-.semana-raizes-negras p {
-  font-size: 16px;
-  font-weight: 700;
-  margin:2%;
-  
-}
-
+.eventos-semana-raizes-negras,
+.atividades-destaque-texto,
 .cards-atividades-destaque {
-  display: flex;
-  justify-content: center;
-  gap:1em;
-  background-color:#e31b23;
-    flex: 0 0 5em;
-    
- 
-}
-
-
-.cards-atividades {
-  width: 700px;
-  height: 650px;
-  border-radius: 5%;
-  background-color:black;
-  display: flex;
-  flex-direction: column;
-  margin: 3%;
-  margin-top:1%;
-  border-color: black;
-  border-width: 3px;
-  border-style: inset;
-  
-}
-
-.card-imagem {
-  width:595px;
-  height: 350px;
-   border-radius: 6%;
-  }
-
-.card-imagem-second {
-  width:595px;
-  height: 350px;
-}
-
-
-
-.card-imagem-second img {
-  width: 100%;
-  height: 100%;
-  border-radius: 6%;
-}
-
-.card-imagem img {
-  width: 100%;
-  height: 100%; 
-  border-radius: 6%;
-
-}
-
-
-.card_conteudo-atividades h2 {
-  padding-top: 3%;
-  color: white;
-  text-align: start;
-  padding-left:3%;
-}
-.card_conteudo-atividades p {
-  color: white;
-  text-align: start;
-  padding-top:1%;
-    padding-left:3%;
-    padding-right: 3%;
-
-}
-
-.card-botao {
-  padding: 10px;
-  width: 150px;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 6px;
-  display: flex;
-  margin-left: 33%;
-  margin-top:4%;
-  border-radius: 5px;
-
-  background-color:#055f23;
-
-  text-decoration: none;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-}
-
-.card-botao:hover {
-  transform: scale(1.03);
-  transition: 0.3s;
-  font-size: 17px;
-    width: 170px;
-  font-weight: 700;
-  background-color: #055f23;
-    border-radius: 14px;
-
-  translate: (-25px);
-}
-
-.card-botao p {
-  font-family:roboto;
-  font-size:16px;
-  color:white;
-  font-weight: 700;
+  width: min(100%, 1280px);
+  margin: 0 auto;
 }
 
 .eventos-semana-raizes-negras {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#055f23;
-  width: 100%;
-  border-radius: 4%;
+  padding: clamp(26px, 4vw, 38px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 0 28px 28px;
+  border-top: 8px solid #111111;
+  background:
+    linear-gradient(145deg, rgba(8, 63, 31, 0.98), rgba(15, 107, 55, 0.96));
+  box-shadow: 0 24px 40px rgba(20, 50, 16, 0.18);
 }
 
-.container-cards-eventos {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: center;
+.eventos-semana-raizes-negras-titulo,
+.atividades-destaque-texto h2 {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.08;
 }
+
 .eventos-semana-raizes-negras-titulo {
-   font-size: 26px;
-  margin-bottom: 10px;
-  font-weight: 700; 
-  margin-top:2%;
+  margin: 0 0 12px;
 }
 
+.atividades-destaque-texto {
+  margin-top: clamp(34px, 5vw, 56px);
+}
 
+.atividades-destaque-texto h2 {
+  margin-bottom: 12px;
+}
+
+.eventos-semana-raizes-negras-descricao,
+.atividades-destaque-texto p {
+  width: min(100%, 760px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.6vw, 1.08rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.94);
+}
 
 .eventos-semana-raizes-negras-descricao {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 60px;
-  padding-bottom: 25px;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(to right, transparent, white , transparent) 1;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.cards-atividades-semana-raizes-negras{
-  width: 380px;
-  height:520px;
-  border-radius: 5%;
-  background-color:black;
+.atividades-destaque-texto p {
+  padding-bottom: 26px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   GRID DE EVENTOS
+   ========================= */
+
+.container-cards-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.cards-atividades-semana-raizes-negras {
   display: flex;
   flex-direction: column;
-  margin: 2%;
-  border-color: black;
-  border-width: 3px;
-  border-style: inset;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(11, 11, 11, 0.96), rgba(26, 26, 26, 0.94));
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
 }
 
-.cards-atividades-semana-raizes-negras:hover{
-     transform: translateY(-15px);
-  transition: 0.3s;
+.cards-atividades-semana-raizes-negras:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 34px rgba(0, 0, 0, 0.24);
 }
 
 .card-imagem-semana-raizes-negras {
-  width:100%;
-   border-radius: 6%;
-}
-.card-imagem-semana-raizes-negras img{
-  width: 300px;
-  height: 300px;
-   border-radius: 6%;
-   margin-top: 3%;
+  width: 100%;
+  padding: 16px 16px 0;
 }
 
-.card_conteudo-atividades-semana-raizes-negras{
+.card-imagem-semana-raizes-negras img {
+  width: 100%;
+  height: clamp(220px, 28vw, 300px);
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.card_conteudo-atividades-semana-raizes-negras {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 22px;
   color: white;
-  text-align: start;
-  padding-left:3%;
-  margin-top: 1%;
-}
-
-.card_conteudo-atividades-semana-raizes-negras p {
-  text-align: start;
-  padding-top:1%;
-    padding-left:3%;
-    padding-right: 3%;
-  margin-top: 1%;
+  text-align: left;
 }
 
 .card_conteudo-atividades-semana-raizes-negras h2 {
-  padding-top: 3%;
-  padding-left:3%;
-  text-align: start;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+}
+
+.card_conteudo-atividades-semana-raizes-negras p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.data {
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #e0bb4f !important;
 }
 
 .card-botao-semana-raizes-negras {
-  padding: 5px;
-  width: 100px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  text-decoration: none;
-  border-radius: 6px;
-  display: flex;
-  margin-left: 29%;
-  margin-top:4%;
-  border-radius: 5px;
+  width: fit-content;
+  min-width: 132px;
+  margin-top: auto;
+  padding: 12px 16px;
   color: white;
-  background-color:#055f23;
   text-align: center;
-  font-size: 14px;
-  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f6b37, #094a26);
+  border-radius: 14px;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.card-botao-semana-raizes-negras:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+.card-botao-semana-raizes-negras p {
+  color: inherit;
+}
+
+/* =========================
+   CARDS DE DESTAQUE
+   ========================= */
+
+.cards-atividades-destaque {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+  align-items: stretch;
+  margin-top: 34px;
+}
+
+.cards-atividades {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0.96), rgba(24, 24, 24, 0.94));
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.cards-atividades:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.24);
+}
+
+.container-zoom {
+  display: block;
+}
+
+.card-imagem,
+.card-imagem-second {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 34vw, 450px);
+  overflow: hidden;
+  background: #0f0f0f;
+}
+
+.card-imagem::after,
+.card-imagem-second::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 38%;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.18));
+}
+
+.card-imagem img,
+.card-imagem-second img,
+.img-segunda {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 320ms ease;
+}
+
+.cards-atividades:hover .card-imagem img,
+.cards-atividades:hover .card-imagem-second img {
+  transform: scale(1.04);
+}
+
+.card_conteudo-atividades {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px 24px;
+}
+
+.card_conteudo-atividades h2 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1.45rem;
+  color: white;
+  text-align: left;
+}
+
+.card_conteudo-atividades p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: left;
+  line-height: 1.75;
+}
+
+.card-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 146px;
+  margin-top: auto;
+  padding: 12px 20px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f6b37, #094a26);
+  border-radius: 14px;
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.card-botao:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+.card-botao p {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero__carousel {
+    left: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 480px;
+  }
+
+  .hero__carousel {
+    left: 50%;
+    top: auto;
+    bottom: 22px;
+    transform: translateX(-50%);
+  }
+
+  .botao__carousel {
+    display: flex;
+    width: 100%;
+  }
+
+  .atividades-destaque {
+    padding: 24px 16px 34px;
+  }
+
+  .eventos-semana-raizes-negras,
+  .atividades-destaque-texto,
+  .cards-atividades-destaque {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 420px;
+  }
+
+  .hero__carousel {
+    width: calc(100% - 24px);
+    padding: 20px 18px;
+    bottom: 14px;
+    border-radius: 22px;
+  }
+
+  .hero__carousel::before {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero__carousel h1 {
+    font-size: 2rem;
+  }
+
+  .hero__carousel p {
+    font-size: 0.94rem;
+  }
+
+  .container-cards-eventos,
+  .cards-atividades-destaque {
+    grid-template-columns: 1fr;
+  }
+
+  .card-imagem,
+  .card-imagem-second,
+  .card-imagem-semana-raizes-negras img {
+    height: 220px;
+  }
+
+  .card-botao,
+  .card-botao-semana-raizes-negras {
+    width: 100%;
+  }
 }

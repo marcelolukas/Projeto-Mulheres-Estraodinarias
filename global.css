@@ -1,239 +1,322 @@
-/* Importa a fonte Poppins do Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --color-bg: #f4e6b4;
+  --color-surface: rgba(244, 230, 180, 0.84);
+  --color-header: #c11f26;
+  --color-text: #171512;
+  --color-border: #111111;
+  --color-accent: #0f6b37;
+  --color-accent-dark: #094a26;
+  --color-red-dark: #8f131a;
+  --color-gold: #e0bb4f;
+  --color-shadow: rgba(17, 17, 17, 0.14);
+  --font-base: "Poppins", sans-serif;
+  --container-padding: clamp(16px, 3vw, 32px);
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --transition-fast: 180ms ease;
+  --transition-base: 260ms ease;
+}
 
 /* =========================
    RESET GLOBAL
    ========================= */
 
-/* Remove margens e paddings padrão do navegador
-   e garante que width/height incluam bordas e padding */
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-   ========================= */
+html {
+  scroll-behavior: smooth;
+}
 
-/* Cor de fundo do site */
 body {
-  background-color: #fff1c1;
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-text);
+  font-family: var(--font-base);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  background:
+    radial-gradient(circle at top, rgba(193, 31, 38, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(15, 107, 55, 0.12), transparent 24%),
+    linear-gradient(180deg, #f2e3b0 0%, #e5cb86 100%);
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(30, 132, 73, 0.45);
+  outline-offset: 3px;
 }
 
 /* =========================
    HEADER
    ========================= */
 
-/* Container principal do cabeçalho */
 .cabecalho {
-  display: flex; /* ativa layout flexível */
-  align-items: center; /* alinha verticalmente */
-  padding: 17px 32px; /* espaço interno */
-  background-color: #e31b23;
-  border-bottom: 3px solid black;
-
-  flex-wrap: wrap; 
-  /* 🔥 ESSENCIAL:
-     permite quebrar linha no mobile */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px var(--container-padding);
+  background:
+    linear-gradient(180deg, rgba(193, 31, 38, 0.97), rgba(143, 19, 26, 0.95));
+  border-bottom: 3px solid var(--color-border);
+  box-shadow: 0 10px 24px var(--color-shadow);
+  backdrop-filter: blur(10px);
 }
 
-/* =========================
-   LOGO
-   ========================= */
+.cabecalho::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 6px;
+  background: linear-gradient(90deg, #111111 0 33%, #c11f26 33% 66%, #0f6b37 66% 100%);
+}
 
-/* Agrupa logo + nome */
 .identidade_do_site {
   display: flex;
   align-items: center;
-  gap: 12px; /* espaço entre elementos */
+  gap: 12px;
+  flex-shrink: 0;
 }
 
-/* Define tamanho da logo */
 .logo_do_site {
-  max-height: 44px;
-  width: auto; /* mantém proporção */
+  width: auto;
+  max-height: 46px;
 }
 
 /* =========================
-   NAV (MENU CENTRAL)
+   NAVEGACAO
    ========================= */
 
-/* Faz o menu ocupar o espaço central */
 .navegacao {
   display: flex;
-  justify-content: center; /* centraliza */
-  flex: 1; 
-  /* 🔥 ESSENCIAL:
-     ocupa espaço entre logo e botão */
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
 }
 
-/* Lista do menu */
 .menu-pagina-inicial {
   display: flex;
-  gap: 40px; /* espaço entre links */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 18px;
+  margin: 0;
+  padding: 0;
   list-style: none;
-
-  font-size: 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
-/* LINKS */
-
-nav a {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-/* efeito hover */
-.navegacao a:hover {
-  transform: scale(1.08);
-  color: #1e8449;
-}
-
-/* =========================
-   BOTÃO DE CONTATO
-   ========================= */
-
-/* Botão principal */
-.botao-contato {
-  position: relative; /* permite posicionar o ícone dentro */
-  z-index: 1;
-
-  background-color: #1e8449;
-
-  display: inline-flex; /* melhor que flex pra botão */
+.navegacao a {
+  position: relative;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-
-  height: 44px;
-
-  padding: 0 40px 0 18px;
-  /* 🔥 IMPORTANTE:
-     mais espaço à direita pro ícone não invadir o texto */
-
-  border: 1.5px solid black;
-  border-radius: 8px;
-
-  text-decoration: none;
-  color: black;
-  font-family: Poppins;
-
-  overflow: hidden; 
-  /* esconde o ícone quando está fora */
-
+  min-height: 42px;
+  padding: 8px 8px 10px;
+  border-radius: 0;
   transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease;
-
-  margin-left: auto;
-  /* 🔥 empurra o botão pra direita */
-
-  width: auto;
-  min-width: 120px;
-  /* 🔥 deixa o botão adaptável (responsivo) */
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
-/* =========================
-   ÍCONE DO BOTÃO
-   ========================= */
-
-/* Ícone animado (punho) */
-.icone-punho {
+.navegacao a::after {
+  content: "";
   position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+  background: #e0bb4f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
+}
 
-  right: 10px; 
-  /* fixa no lado direito do botão */
+.navegacao a:hover,
+.navegacao a:focus-visible {
+  color: #ffffff;
+  background-color: transparent;
+  transform: translateY(-1px);
+}
 
-  bottom: -20px;
-  /* começa abaixo do botão */
-
-  width: 60px;
-  height: auto;
-
-  opacity: 0;
-  /* começa invisível */
-
-  transform: translate(40px, 20px);
-  /* 🔥 MUITO IMPORTANTE:
-     começa fora do botão (direita + baixo) */
-
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.navegacao a:hover::after,
+.navegacao a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 /* =========================
-   TEXTO DO BOTÃO
+   BOTAO DE CONTATO
    ========================= */
+
+.botao-contato {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 168px;
+  min-height: 52px;
+  margin-left: auto;
+  padding: 0 52px 0 20px;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(224, 187, 79, 0.2), transparent 48%),
+    linear-gradient(135deg, #158447, #094a26);
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 10px 20px rgba(20, 99, 56, 0.2);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.botao-contato::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.botao-contato::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35%;
+  width: 32%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: skewX(-22deg);
+  transition: left 320ms ease;
+  pointer-events: none;
+}
+
+.botao-contato:hover {
+  transform: translateY(-3px) scale(1.01);
+  filter: brightness(1.04);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 16px 30px rgba(20, 99, 56, 0.28);
+}
+
+.botao-contato:hover::after {
+  left: 118%;
+}
 
 .texto-botao {
   position: relative;
   z-index: 3;
-
   white-space: nowrap;
-  /* 🔥 impede quebra de linha */
-
-  transition: transform 0.25s ease;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: transform var(--transition-base), letter-spacing var(--transition-fast);
 }
 
-/* Quando passa o mouse */
 .botao-contato:hover .texto-botao {
-  transform: translateX(-10px);
-  /* texto vai levemente pra esquerda */
+  transform: translateX(-6px);
+  letter-spacing: 0.02em;
 }
 
-/* Hover do botão */
-.botao-contato:hover {
-  background-color: #1e8449;
-  border-color: black;
+.icone-punho {
+  position: absolute;
+  right: 4px;
+  bottom: -22px;
+  z-index: 2;
+  width: 74px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-base);
 }
 
-/* Animação do ícone */
 .botao-contato:hover .icone-punho {
   opacity: 1;
-
-  transform: translate(0, -10px);
-  /* 🔥 entra da direita pra dentro */
+  transform: translateY(-7px);
 }
 
 /* =========================
-   RESPONSIVIDADE (MOBILE)
+   RESPONSIVIDADE
    ========================= */
 
-@media (max-width: 768px) {
-
+@media (max-width: 900px) {
   .cabecalho {
-    flex-direction: column;
-    /* 🔥 muda de linha horizontal → vertical */
+    flex-wrap: wrap;
+  }
 
-    gap: 15px;
+  .navegacao {
+    order: 3;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .menu-pagina-inicial {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .cabecalho {
+    justify-content: center;
+    gap: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .identidade_do_site {
     width: 100%;
     justify-content: center;
-    /* centraliza logo */
-  }
-
-  .navegacao {
-    width: 100%;
   }
 
   .menu-pagina-inicial {
-    flex-direction: column;
-    /* 🔥 menu vira vertical */
+    gap: 10px;
+    font-size: 0.88rem;
+  }
 
-    align-items: center;
-    gap: 15px;
+  .navegacao a {
+    width: 100%;
   }
 
   .botao-contato {
-    margin: 10px auto 0;
-    /* centraliza botão no mobile */
+    margin-left: 0;
   }
 }
