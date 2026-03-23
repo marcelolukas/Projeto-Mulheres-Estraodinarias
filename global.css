@@ -318,5 +318,37 @@ select {
 
   .botao-contato {
     margin-left: 0;
+    min-width: auto;
+    min-height: 42px;
+    padding: 8px 14px 10px;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .botao-contato::before,
+  .botao-contato::after,
+  .icone-punho {
+    display: none;
+  }
+
+  .texto-botao {
+    transform: none !important;
+    letter-spacing: 0;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .botao-contato:hover {
+    transform: translateY(-1px);
+    filter: none;
+    box-shadow: none;
+  }
+
+  .botao-contato:hover .texto-botao {
+    color: #ffffff;
   }
 }
