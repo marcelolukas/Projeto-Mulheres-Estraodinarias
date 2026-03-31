@@ -4,11 +4,8 @@ body {
 }
 
 body {
-  color: #1b1c18;
-  background:
-    radial-gradient(circle at top, rgba(193, 31, 38, 0.12), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(15, 107, 55, 0.12), transparent 24%),
-    linear-gradient(180deg, #f2e3b0 0%, #e5cb86 100%);
+  background: #c11f26
+    
 }
 
 main {
@@ -131,6 +128,9 @@ main {
 .motivos-extraordinaria {
   background: #101111;
   color: white;
+  width: 1000px;
+  margin-top: 70px;
+  margin-left:200px;
 }
 
 .linha-do-tempo {
