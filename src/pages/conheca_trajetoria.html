@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TrajetÃ³ria Angela Davis</title>
+    <title>Conheça a Trajetória</title>
 
     <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/transicao.css" />
     <link rel="stylesheet" href="../styles/conheca_trajetoria.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
 
   <body>
     <div class="div_transicao"></div>
 
+    <!-- HEADER -->
     <header class="cabecalho">
       <div class="identidade_do_site">
         <img
@@ -25,9 +27,9 @@
       <nav class="navegacao">
         <ul class="menu-pagina-inicial">
           <li><a href="pagina_inicial.html">Início</a></li>
-          <li><a href="Quem_Somos.html">Quem Somos</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Eventos</a></li>
+          <li><a href="quem_somos_generico.html">Quem Somos</a></li>
+          <li><a href="ver_todas.html">Mulheres</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
         </ul>
       </nav>
 
@@ -43,191 +45,203 @@
       </a>
     </header>
 
-    <main>
-      <section class="intro-page">
-        <img id="img-fundo" src="" alt="Imagem representativa" />
-        <div class="overlay"></div>
+    <main class="trajetoria-main">
+      <!-- HERO SECTION -->
+      <section class="hero-trajetoria">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 id="nome-principal" class="hero-title">Nome da Mulher</h1>
+          <blockquote id="citacao-principal" class="hero-quote">
+            "Citação inspiradora"
+          </blockquote>
+        </div>
+      </section>
 
-        <div class="content">
-          <h1 id="nome-principal"></h1>
-          <blockquote id="citacao-principal"></blockquote>
+      <!-- MENU DE NAVEGAÇÃO FIXO -->
+      <nav class="menu-navegacao-fixo">
+        <div class="menu-nav-container">
+          <a href="#biografia" class="menu-nav-link">
+            <i class="fas fa-user-circle"></i>
+            <span>Biografia</span>
+          </a>
+          <a href="#timeline" class="menu-nav-link">
+            <i class="fas fa-hourglass-start"></i>
+            <span>Linha do Tempo</span>
+          </a>
+          <a href="#extraordinaria" class="menu-nav-link">
+            <i class="fas fa-heart"></i>
+            <span>Extraordinária</span>
+          </a>
+          <a href="#legado" class="menu-nav-link">
+            <i class="fas fa-torch"></i>
+            <span>Legado</span>
+          </a>
+          <a href="#veja-tambem" class="menu-nav-link">
+            <i class="fas fa-users"></i>
+            <span>Similares</span>
+          </a>
+        </div>
+      </nav>
+
+      <!-- SEÇÃO BIOGRAFIA -->
+      <section class="secao-trajetoria" id="biografia">
+        <div class="secao-container">
+          <div class="secao-header">
+            <h2>
+              <i class="fas fa-user-circle"></i>
+              Um Pouco Sobre
+            </h2>
+          </div>
+
+          <div class="biografia-layout">
+            <div class="biografia-texto" id="texto-biografia">
+              <!-- O JavaScript coloca o conteúdo aqui -->
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae nibh. Cras porttitor metus justo vel porta lobortis, eros odio, quis accumsan ante turpis sed eros molestie, tempor nisi velit in odio ipsum dolor sit amet.</p>
+              <p>Donec venenatis inceptos quam porttitor pharetra urna elementum aenean, lobortis ante nisi mauris lacus fringilla, sed metus tellus posuere arcu rutrum laoreet. Proin tempor faucibus nisi sed.</p>
+            </div>
+            <div class="biografia-imagem">
+              <img id="img-biografia" src="../assets/mulheres/dandara.png" alt="Imagem da mulher" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO LINHA DO TEMPO -->
+      <section class="secao-trajetoria" id="timeline">
+        <div class="secao-container">
+          <div class="secao-header">
+            <h2>
+              <i class="fas fa-hourglass-start"></i>
+              Linha do Tempo
+            </h2>
+          </div>
+
+          <div class="timeline-container" id="linha-do-tempo">
+            <div class="timeline-item">
+              <div class="timeline-year">1800</div>
+              <div class="timeline-conteudo">
+                <div class="timeline-text">Nascimento ou período inicial da vida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae nibh cras porttitor.</div>
+                <div class="timeline-imagem">
+                  <img src="../assets/mulheres/carolina.png" alt="Período 1800" />
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1850</div>
+              <div class="timeline-conteudo">
+                <div class="timeline-text">Principais ações e acontecimentos. Donec venenatis inceptos quam porttitor pharetra urna elementum. Lobortis ante nisi mauris lacus fringilla sed metus tellus.</div>
+                <div class="timeline-imagem">
+                  <img src="../assets/mulheres/celia.png" alt="Período 1850" />
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-year">1900</div>
+              <div class="timeline-conteudo">
+                <div class="timeline-text">Legado e impacto final. Proin tempor faucibus nisi sed mauris. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</div>
+                <div class="timeline-imagem">
+                  <img src="../assets/mulheres/leila.png" alt="Período 1900" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO EXTRAORDINÁRIA -->
+      <section class="secao-trajetoria secao-destacada" id="extraordinaria">
+        <div class="secao-container">
+          <div class="secao-header">
+            <h2>
+              <i class="fas fa-heart"></i>
+              Por Que é Extraordinária?
+            </h2>
+          </div>
+
+          <div class="extraordinaria-layout">
+            <div class="extraordinaria-content" id="contexto-content">
+              <p>A existência desta mulher é um dos maiores atos de resistência. Sua luta pela liberdade foi extraordinária e inspira todos a combater injustiças.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus est massa, dictumst sit amet, lectus. Donec tincidunt, orci non ultricies tincidunt, felis nulla porttitor, rutrum velit sem. Esse porttitor nibh, ultrices cras non adipiscing.</p>
+            </div>
+            <div class="extraordinaria-imagem">
+              <img src="../assets/mulheres/maria.png" alt="Imagem de legado" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO LEGADO -->
+      <section class="secao-trajetoria" id="legado">
+        <div class="secao-container">
+          <div class="secao-header">
+            <h2>
+              <i class="fas fa-torch"></i>
+              Legado e Impacto
+            </h2>
+          </div>
+
+          <div class="legado-content" id="legado-content">
+            <p>Sua vida e luta são seus legados. Os mesmos são expoentes de transformação social, servindo como exemplo de mulher protagonista de seu tempo.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="legado-imagem">
+              <img src="../assets/mulheres/tereza.png" alt="Impacto e Legado" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO REFERÊNCIAS -->
+      <section class="secao-trajetoria" id="referencias">
+        <div class="secao-container">
+          <div class="secao-header">
+            <h2>
+              <i class="fas fa-link"></i>
+              Referências e Fontes
+            </h2>
+            <p class="secao-subtitulo">Conheça as fontes e aprofunde seu conhecimento</p>
+          </div>
+
+          <div class="referencias-list" id="referencias-content">
+            <!-- O JavaScript coloca o conteúdo aqui -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO RELACIONADOS -->
+      <section class="secao-trajetoria secao-relacionados">
+        <div class="secao-container">
+          <div class="secao-header">
+            <h2>
+              <i class="fas fa-users"></i>
+              Outras Mulheres Extraordinárias
+            </h2>
+            <p class="secao-subtitulo">Confira histórias semelhantes e inspiradoras</p>
+          </div>
+
+          <div class="mulheres-grid" id="veja-tambem">
+            <!-- O JavaScript coloca o conteúdo aqui -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="secao-cta">
+        <div class="cta-box">
+          <h3>Quer Conhecer Mais Mulheres Extraordinárias?</h3>
+          <p>Navegue por nossa galeria completa e descubra histórias de resistência, luta e transformação</p>
+          <a href="ver_todas.html" class="cta-button">
+            <i class="fas fa-arrow-right"></i>
+            Ver Todas as Mulheres
+          </a>
         </div>
       </section>
     </main>
-
-    <nav class="menu">
-      <ul class="menu-navegacao">
-        <li>
-          <a href="#biografia">
-            Um pouco sobre a vida de <span id="nome-menu-1">NOME</span>
-          </a>
-        </li>
-        <li><a href="#tempo">Linha do Tempo</a></li>
-        <li>
-          <a href="#contexto">
-            Por que <span id="nome-menu-2">NOME</span> Ã© uma mulher
-            extraordinÃ¡ria?
-          </a>
-        </li>
-        <li><a href="#legado">Legados</a></li>
-        <li><a href="#referecia">Referencias</a></li>
-      </ul>
-    </nav>
-
-    <section class="biografia" id="biografia">
-      <h1>
-        <b>Um pouco sobre a vida de <span id="nome-titulo">Nome</span></b>
-      </h1>
-
-      <div id="texto-biografia">
-        <!-- O JavaScript coloca os <p> aqui dentro -->
-      </div>
-    </section>
-
-    <div class="carrosel-trajetoria">
-      <div class="texto-trajetoria">
-        <h1>Angela Davis</h1>
-        <p>
-          â€œQuando a mulher negra se movimenta, toda a estrutura da sociedade se
-          movimenta com elaâ€
-        </p>
-      </div>
-
-      <img class="imagem" src="../assets/mulheres/celia.png" alt="Imagem em destaque" />
-    </div>
-
-    <section class="linha-do-tempo" id="tempo">
-      <h2>Linha do Tempo</h2>
-      <p>
-        1907 - Magdalena Carmen Fridakahlo CalderÃ³n nasce em 6 de julho na
-        Cidade do MÃ©xico;
-      </p>
-      <p>
-        1913 - aos 6 anos de idade contraiu poliomielite, doenÃ§a que deixa
-        sequelas em sua perna direita, motivo de chacotas;
-      </p>
-      <p>
-        1922 - ingressou na Escola Nacional PreparatÃ³ria, onde teve o primeiro
-        contato com ideais a frente seu tempo, impulsionados pela RevoluÃ§Ã£o
-        Mexicana;
-      </p>
-      <p>
-        1925 - sofreu um trÃ¡gico acidente de Ã´nibus, no qual fraturou vÃ¡rios
-        ossos e a espinha dorsal. Em decorrÃªncia disso, ficou imobilizada por
-        vÃ¡rios meses e durante esse perÃ­odo comeÃ§ou a pintar;
-      </p>
-      <p>
-        1929 - casou-se com o reconhecido artista Diego Rivera, o qual conheceu
-        apÃ³s frequentar cÃ­rculos artÃ­sticos e sociais mexicanos;
-      </p>
-      <p>
-        1930 - 1933 - viveu com seu companheiro em diferentes cidades dos EUA.
-        Durante esse perÃ­odo sofre seu primeiro aborto (1930) e o falecimento de
-        sua mÃ£e (1932);
-      </p>
-      <p>
-        1937 - junto a seu companheiro acolhe em sua casa o lÃ­der comunista Leon
-        Trotsky e sua esposa, NatÃ¡lia. Frida alÃ©m de uma intensa vida artÃ­stica,
-        foi uma grande ativista polÃ­tica e integrante do Partido Comunista
-        Mexicano;
-      </p>
-      <p>
-        1938 - realizou a primeira exposiÃ§Ã£o individual na Galeria Juelin Levy
-        em Nova York;
-      </p>
-      <p>
-        1939 - integrou a exposiÃ§Ã£o Mexique na Galeria Renon et Colle de Paris.
-        Neste ano tambÃ©m se divorciou de seu companheiro. O relacionamento era
-        bastante conflituoso, em especial, devido a infidelidade de Diego que
-        desencadeou uma sÃ©rie de crises emocionais na artista;
-      </p>
-      <p>
-        1940 - casou-se novamente com Diego Rivera sob o acordo de vidas sexuais
-        autÃ´nomas. TambÃ©m integra as exposiÃ§Ãµes Vinte SÃ©culos de Arte Mexicana
-        no Museu de Arte Moderna de Nova York e Internacional de Surrealistas da
-        Galeria de Arte Mexicana InÃ©s Amor;
-      </p>
-    </section>
-
-    <section class="motivos-extraordinaria" id="contexto">
-      <div class="texto-motivos-extraordinaria">
-        <h3>Por que Dandara Ã© uma mulher extraordinÃ¡ria?</h3>
-        <p>
-          A existÃªncia de Dandara Ã© um dos maiores atos de resistÃªncia ao
-          sistema escravocrata. Sua luta pela liberdade do povo negro foi
-          extraordinÃ¡ria e inspira a todos/as no combate ao racismo.
-        </p>
-      </div>
-    </section>
-
-    <section class="legado" id="legado">
-      <div class="legado-texto">
-        <h4>Legados</h4>
-        <p>
-          Sua vida e luta sÃ£o seus legados. Os mesmos sÃ£o expoentes da luta
-          antirracista, em especial o Feminismo Negro, ao qual tambÃ©m servem de
-          exemplo de mulher negra protagonista de seu tempo.
-        </p>
-      </div>
-    </section>
-
-    <section class="referencias" id="referecia">
-      <div class="referencias-texto">
-        <h5>Referencias</h5>
-        <p>
-          Kleber Henrique. Dandara: A Face Feminina de Palmares. Portal Geledes.
-          2011. DisponÃ­vel em:
-          <https://www.geledes.org.br/dandara-a-face-feminina-de-palmares/>
-        </p>
-      </div>
-    </section>
-
-    <section class="veja-tambem">
-      <h3>Veja tambÃ©m</h3>
-
-      <div class="card-mulheres">
-        <article class="cards">
-          <div class="card-imagem-veja-tambem">
-            <img src="../assets/mulheres/rosa.png" width="30%" alt="imagem mulher" />
-          </div>
-
-          <div class="card_conteudo">
-            <p class="linha texto-2"><b>Rosa Parks</b></p>
-            <a href="ver_todas.html" class="card-botao">ConheÃ§a sua trajetÃ³ria</a>
-          </div>
-        </article>
-
-        <article class="cards">
-          <div class="card-imagem-veja-tambem">
-            <img src="../assets/mulheres/rosa.png" width="30%" alt="imagem mulher" />
-          </div>
-
-          <div class="card_conteudo">
-            <p class="linha texto-2"><b>Rosa Parks</b></p>
-            <a href="ver_todas.html" class="card-botao">ConheÃ§a sua trajetÃ³ria</a>
-          </div>
-        </article>
-
-        <article class="cards">
-          <div class="card-imagem-veja-tambem">
-            <img src="../assets/mulheres/rosa.png" width="30%" alt="imagem mulher" />
-          </div>
-
-          <div class="card_conteudo">
-            <p class="linha texto-2"><b>Rosa Parks</b></p>
-            <a href="ver_todas.html" class="card-botao">ConheÃ§a sua trajetÃ³ria</a>
-          </div>
-        </article>
-      </div>
-    </section>
 
     <script src="../scripts/transicao.js"></script>
     <script src="../scripts/animacoes.js"></script>
     <script src="../scripts/dados_perfil.js"></script>
     <script src="../scripts/perfil.js"></script>
-
-    <script>
-      "carrosel_trajetoria_page.js";
-    </script>
   </body>
 </html>
